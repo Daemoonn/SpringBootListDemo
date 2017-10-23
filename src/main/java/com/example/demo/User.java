@@ -6,18 +6,20 @@ import java.util.Date;
 @Entity @Table(name = "ls_user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
     private String username;
     private String password;
     private Date gmtCreate;
     private Date gmtUpdate;
 
-    public int getId() {
+    public User() {
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
