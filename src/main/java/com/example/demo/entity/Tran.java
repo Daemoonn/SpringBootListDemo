@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.entity;
 
 public class Tran {
     private String id;

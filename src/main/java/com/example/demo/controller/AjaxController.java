@@ -1,11 +1,10 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.entity.Response;
+import com.example.demo.entity.Tran;
+import com.example.demo.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 public class AjaxController {

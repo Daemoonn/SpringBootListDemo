@@ -1,14 +1,15 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.*;
+import com.example.demo.dao.UserDao;
+import com.example.demo.entity.Response;
+import com.example.demo.entity.Tran;
+import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class LoginController {
