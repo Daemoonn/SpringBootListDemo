@@ -1,0 +1,1 @@
+Practice of SpringBoot, Jquery, thymeleaf, ajax to implement a CRUD user list with update form and ajax check.
