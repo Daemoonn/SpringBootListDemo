@@ -67,7 +67,7 @@
             success: function (result) {
                 if(result.status == "No") {
 //                    alert('this is call back: ' + result.data.id);
-                    $("#wp").html("Warning!!!");
+                    $("#wp").html("Duplicate ID!!!");
                     $("#id").focus();
                 } else {
                     $("#wp").html("");
