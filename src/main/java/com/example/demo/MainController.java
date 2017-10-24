@@ -32,6 +32,14 @@ public class MainController {
         return modelAndView;
     }
 
+    @GetMapping("/login")
+    public ModelAndView getLoginPage(Model model) {
+        ModelAndView modelAndView = new ModelAndView("login");
+        User user = new User();
+        model.addAttribute("user", user);
+        return modelAndView;
+    }
+
 //    @PostMapping("/hello")
 //    public String update(@ModelAttribute User user) {
 //        return "result";
