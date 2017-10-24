@@ -32,8 +32,8 @@
             <!--th:onclick="'alert(\'' + ${user.id} + '\');'"-->
             <!--th:onclick="${'javascript:deleteUser(' + user.id + ');'}"-->
             <!--th:onclick="'alert(\'' + ${user.id} + '\');'"-->
-            <td><button th:id="'btne' + ${user.id}" th:if="true" type="submit" class="btn btn-default" th:onclick="'javascript:updateUser(' + ${user.id} + ');'">Edit</button></td>
-            <td><button th:id="'btnd' + ${user.id}" th:if="true" type="submit" class="btn btn-default" th:onclick="'javascript:deleteUser(' + ${user.id} + ');'">Delete</button></td>
+            <td><button th:id="'btne' + ${user.id}" type="submit" class="btn btn-default" th:onclick="'javascript:updateUser(' + ${user.id} + ');'">Edit</button></td>
+            <td><button th:id="'btnd' + ${user.id}" type="submit" class="btn btn-default" th:onclick="'javascript:deleteUser(' + ${user.id} + ');'">Delete</button></td>
         </tr>
     </tbody>
 </table>

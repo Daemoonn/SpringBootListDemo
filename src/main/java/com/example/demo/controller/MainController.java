@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.WebSecurityConfig;
 import com.example.demo.entity.User;
 import com.example.demo.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +9,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
 public class MainController {
     @Autowired
     private UserDao userDao;
+
+    @GetMapping("/nologin")
+    public ModelAndView getNologinPage(Model model) {
+        ModelAndView modelAndView = new ModelAndView("nologin");
+
+        List<User> userList = userDao.findAll();
+        model.addAttribute("userList", userList);
+
+        return modelAndView;
+    }
 
     @GetMapping("/hello")
     public ModelAndView hello(Model model){
@@ -42,20 +54,4 @@ public class MainController {
         return modelAndView;
     }
 
-//    @PostMapping("/hello")
-//    public String update(@ModelAttribute User user) {
-//        return "result";
-//    }
-
-//    @DeleteMapping("/hello")
-//    public String delete(@RequestParam("id") String id) {
-//        System.out.println("Delete Call!!!!");
-//        return "index";
-//    }
-
-//    @GetMapping("/hello/{id}")
-//    public String retweet(@PathVariable long id) {
-//        System.out.println("retweet------------!!!");
-//        return "/hello";
-//    }
 }
