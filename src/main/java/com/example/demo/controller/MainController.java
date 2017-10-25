@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.WebSecurityConfig;
 import com.example.demo.entity.User;
 import com.example.demo.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller

@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.WebSecurityConfig;
+import com.example.demo.config.WebSecurityConfig;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

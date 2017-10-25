@@ -1,9 +1,10 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -37,6 +38,12 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter {
 		addInterceptor.excludePathPatterns("/error");
 		addInterceptor.excludePathPatterns("/login/**");
 		addInterceptor.excludePathPatterns("/nologin");
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/src/main/webapp/**").addResourceLocations("classpath:/webapp/");
+		super.addResourceHandlers(registry);
 	}
 
 	private class SecurityInterceptor extends HandlerInterceptorAdapter {
