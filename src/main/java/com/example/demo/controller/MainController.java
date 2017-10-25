@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class MainController {
@@ -40,6 +41,7 @@ public class MainController {
         user.setUsername("Johnyy");
         user.setPassword("123454132");
         model.addAttribute("user", user);
+
 
         return modelAndView;
     }

@@ -10,6 +10,7 @@ public class User {
     private String username;
     private String password;
     private String avatarurl;
+    private String avataruuid;
 
     public User() {
     }
@@ -44,5 +45,13 @@ public class User {
 
     public void setAvatarurl(String avatarurl) {
         this.avatarurl = avatarurl;
+    }
+
+    public String getAvataruuid() {
+        return avataruuid;
+    }
+
+    public void setAvataruuid(String avataruuid) {
+        this.avataruuid = avataruuid;
     }
 }

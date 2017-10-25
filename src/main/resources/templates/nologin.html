@@ -23,7 +23,7 @@
         <tr th:each="user: ${userList}" th:id="'r' + ${user.id}">
             <td th:text="${user.id}"></td>
             <td>
-                <img class="img-thumbnail" style="width: 70px; height: 70px" th:src="@{${user.id}+'.jpg'}" alt="avatar"/>
+                <img class="img-thumbnail" style="width: 70px; height: 70px" th:src="@{${user.avataruuid}+'.jpg'}" alt="avatar"/>
             </td>
             <td th:text="${user.username}"></td>
             <td th:text="${user.password}"></td>
