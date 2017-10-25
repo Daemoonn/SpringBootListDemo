@@ -64,7 +64,9 @@ public class UpdateController {
             }
             return "redirect:/hello";
         } else {
-            return "上传失败，因为文件是空的.";
+            userDao.save(user);
+            System.out.println("上传失败，因为文件是空的.");
+            return "redirect:/hello";
         }
     }
 
