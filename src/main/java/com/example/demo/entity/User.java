@@ -9,8 +9,7 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private Date gmtCreate;
-    private Date gmtUpdate;
+    private String avatarurl;
 
     public User() {
     }
@@ -39,19 +38,11 @@ public class User {
         this.password = password;
     }
 
-    public Date getGmtCreate() {
-        return gmtCreate;
+    public String getAvatarurl() {
+        return avatarurl;
     }
 
-    public void setGmtCreate(Date gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    public Date getGmtUpdate() {
-        return gmtUpdate;
-    }
-
-    public void setGmtUpdate(Date gmtUpdate) {
-        this.gmtUpdate = gmtUpdate;
+    public void setAvatarurl(String avatarurl) {
+        this.avatarurl = avatarurl;
     }
 }
